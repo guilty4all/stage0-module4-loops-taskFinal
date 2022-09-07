@@ -10,16 +10,20 @@ public class Pyramid {
             if (i == 1) {
                 line = Integer.toString(i);
                 sp = (sp - line.length()) / 2;
-                result =  " ".repeat(sp) + line + " ".repeat(sp) + "\n";
+                result = " ".repeat(sp) + line + " ".repeat(sp) + "\n";
             } else {
                 line = Integer.toString(i) + line + Integer.toString(i);
                 sp = (sp - line.length()) / 2;
-                result =  " ".repeat(sp) + line + " ".repeat(sp) + "\n";
+                result = " ".repeat(sp) + line + " ".repeat(sp) + "\n";
             }
-            System.out.print(result);
+            if (cathetusLength == 0) {
+                result = "";
+            }
         }
-
+        System.out.print(result);
     }
+
+
 
     public static void main(String[] args) {
         new Pyramid().printPyramid(7);
