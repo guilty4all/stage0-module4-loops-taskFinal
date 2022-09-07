@@ -18,7 +18,7 @@ public class Pyramid {
             }
             System.out.print(result);
         }
-        }
+
     }
 
     public static void main(String[] args) {
