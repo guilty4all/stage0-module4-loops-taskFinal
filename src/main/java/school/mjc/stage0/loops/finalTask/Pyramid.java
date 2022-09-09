@@ -3,20 +3,21 @@ package school.mjc.stage0.loops.finalTask;
 public class Pyramid {
     public void printPyramid(int cathetusLength) {
         String line = "";
-        String result = "";
         for(int i = 1;i <= cathetusLength;i++){
-            if (i==1){
+            if (i==1 && cathetusLength > 0){
                 line= ""+i;
-                result += " ".repeat(cathetusLength-1)+line+"\n";
-            }else if (i >1 && i <= cathetusLength){
-                String word = line;
-                line = ""+i+""+word+""+i;
-                result += " ".repeat(cathetusLength-i)+ line + "\n";
+                System.out.println(" ".repeat(cathetusLength-1)+line);
             }else{
-                result = "";
+                if (cathetusLength == 0) {
+                    System.out.println("");
+                }else{
+                    String word = line;
+                    line = ""+i+""+word+""+i;
+                    System.out.println(" ".repeat(cathetusLength-i)+ line);
+                }
+
             }
         }
-        System.out.println(result);
     }
 
 
